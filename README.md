@@ -4,11 +4,11 @@ Juan Diego Lemus Rey \- 0000243911
 
 How can industrial automation be utilized to automate the monitoring of chemical liquid tank levels, thereby reducing both energy consumption and liquid waste?
 
-![img/image1.png][img/image1.png]
+![](imgs/image1.png)
 
 Given this instructions of sensor and indicators:
 
-![][image2]
+![](imgs/image2.png)
 
 | B3  | B2  | B1  | H5  | H4  | H3  | H2  | H1  | Meaning |
 | --- | --- | --- | --- | --- | --- | --- | --- | :------ |
