@@ -58,7 +58,7 @@ Additionally the lines should also make a control of whatever they are using to 
    ERROR: 0% Valve, Pump OFF, Indicator H5
 
 Ii will look like this in LADDER:  
-![][image3]
+![](imgs/image3.png)
 
 We can use the output Coils also as input Contractors; and since some of the outputs I aggregated arbitrary for the control are similar, managing a single output with multiple network lines might lead to contradictions, it is better if they are grouped like this:
 
@@ -68,10 +68,10 @@ We can use the output Coils also as input Contractors; and since some of the out
 
 This way there will only be one network line managing each output, like the following:
 
-![][image4]
+![](imgs/image4.png)
 
 Now, with our logic we can proceed to the human interface HMI display, in this case with some creativity we can simulate and illustrate what is happening at the same time using CODESYS Visualization tool like this:  
-![][image5]
+![](imgs/image5.png)
 
 In this case, the Switches represent the sensors B3, B2, B1 respectively (top to bottom) so when the Switch is pressed means the sensor is sensing water, Inwards arrow is the IN pump being activated, Outgoing arrows indicate the 0, 50 or 100% water outflow. and the indicator lamps (top to bottom) are:
 
@@ -87,40 +87,32 @@ Case 1:
 
 No sensor B1,B2 or B3 is on, the tank is empty so it will display the H4 indicator and turn on the pump to start filling it.
 
-![][image6]![][image7]
+![](imgs/image6.png)
+![](imgs/image7.png)
 
 Case 2:
 
 Sensor B1 is ON B2 and B3 are OFF, that turns ON H2, indicating LOW level, that opens the valve in half and keeps the pump flowing:
 
-![][image8]
-
-![][image9]
+![](imgs/image8.png)
+![](imgs/image9.png)
 
 Case 3:
 
 Sensor B1 and B2 are ON, so the level is just right, meaning H1 indicator will be ON and the 100% of the water outflows through the valve and inflows with the pump like this:
 
-![][image10]
-
-![][image11]
+![](imgs/image10.png)
+![](imgs/image11.png)
 
 Case 4:
 
 All 3 Sensors are ON, meaning the tank is overflown, that turns H3 indicator ON, keeps the outflow valve 100% open and this time it does turn OFF the incoming Pump.
 
-![][image12]
-
-![][image13]
+![](imgs/image12.png)
+![](imgs/image13.png)
 
 Error Cases:
 
 Cases that are impossible to occur naturally, meaning a sensor malfunction or a transmission error, anyhow it turns ON the H5 indicator, everything else is OFF and it requires human revision…:
 
-B1 \= OFF; B2 \= B3 \= ON
-
-![][image14]![][image15]
-
-B1 \= B2 \= OFF; B3 \= ON
-
-![][image16]![][image17]
+![](imgs/image14.png)
